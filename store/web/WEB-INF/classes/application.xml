@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+   <bean id="CategoryDao" class="top.suyuanshine.store.service.daoImp.CategoryDaoImpl"/>
+   <bean id="UserDao" class="top.suyuanshine.store.service.daoImp.UserDaoImp"/>
+   <bean id="ProductDao" class="top.suyuanshine.store.service.daoImp.ProductDaoImpl"/>
+   <bean id="OrderDao" class="top.suyuanshine.store.service.daoImp.OrderDaoImpl"/>
+   <bean id="AdminUserDao" class="top.suyuanshine.store.service.daoImp.AdminUserDaoImpl"/>
+</beans>
