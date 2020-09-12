@@ -59,7 +59,6 @@ public class UserServlet extends BaseServlet {
     //registUI注册界面
     public String registUI(HttpServletRequest request, HttpServletResponse response) throws ServletException, Exception {
        codeimg(request,response);
-        System.out.println("注册");
         return "/jsp/register.jsp";
     }
 

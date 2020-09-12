@@ -41,15 +41,18 @@ public class UserLoginFilter implements Filter {
                 User user=new User();
                 user.setUsername(strs[0]);
                 user.setPassword(strs[1]);
+
                 try {
                     //进行登录,并存入session
                     User user1=new UserDaoImp().userLogin(user);
-                    //如果有cookie，并且查询用户不为空访问登录注册,则直接跳转首页
-                    if ("method=loginUI-method=registUI".contains(url+"")&&user1!=null){
+                    //成功用cookie信息查询到信息
+                    if (user1!=null){
                         request.getSession().setAttribute("loginUser",user1);
-                        request.getRequestDispatcher("/IndexServlet").forward(request,response);
-
-                        return;
+                        //如果有cookie，访问登录注册,则直接跳转首页
+                        if ("method=loginUI-method=registUI".contains(url+"")){
+                            request.getRequestDispatcher("/IndexServlet").forward(request,response);
+                            return;
+                        }
                     }
                 } catch (SQLException e) {
                     e.printStackTrace();

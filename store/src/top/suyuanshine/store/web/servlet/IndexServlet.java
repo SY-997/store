@@ -25,4 +25,13 @@ public class IndexServlet extends BaseServlet {
         req.setAttribute("news",news);
         return "jsp/index.jsp";
     }
+
+    //有cookie登录
+    public String loginUI(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        return "jsp/index.jsp";
+    }
+    //有cookie注册
+    public String registUI(HttpServletRequest request, HttpServletResponse response) throws ServletException, Exception {
+        return "jsp/index.jsp";
+    }
 }
