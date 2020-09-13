@@ -9,3 +9,5 @@
 项目地址http://suyuanshine.top/store/ <br>
 测试账号：test01 <br>
 密码：123456zxc <br>
+后台http://suyuanshine.top/store/admin.jsp
+账号密码：admin
